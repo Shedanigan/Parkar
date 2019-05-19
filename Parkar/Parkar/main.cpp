@@ -1,5 +1,5 @@
 //#define DEBUG
-#define PRINT
+//#define PRINT
 
 #ifdef DEBUG
 #define PRINT
@@ -13,7 +13,7 @@ int main(int argc, char** argv)
 	SDL_Init(SDL_INIT_VIDEO);
 	unsigned int window_w = 1280;
 	unsigned int window_h = 800;
-	SDL_Window* window = SDL_CreateWindow("Parkar", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, window_w, window_h, SDL_WINDOW_SHOWN);
+	SDL_Window* window = SDL_CreateWindow("Parkar", SDL_WINDOWPOS_CENTERED, 0, window_w, window_h, SDL_WINDOW_BORDERLESS);
 	SDL_Renderer* renderer = SDL_CreateRenderer(window, -1, SDL_RENDERER_ACCELERATED);
 
 	unsigned int current_time = SDL_GetTicks();
